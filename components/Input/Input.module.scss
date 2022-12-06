@@ -1,0 +1,58 @@
+@import './styles/variables/fontsAndColors.module.scss';
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 6px;
+    padding-bottom: 2rem;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .text::placeholder {
+        font-size: 1.2rem;
+        text-transform: lowercase;
+        color: grey;
+        font-weight: $weight-light;
+    }
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    padding: 1rem 0;
+    width: 35%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: $colorSecondary;
+    font-size: 1.2rem;
+    font-weight: $weight-semibold;
+}
+
+.text:focus {
+    outline: none
+}
+
+.icons {
+    margin-left: 1.5rem;
+}
+
+.icon {
+    color: $colorPrimary;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    vertical-align: middle;
+
+}
