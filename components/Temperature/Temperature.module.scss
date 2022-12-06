@@ -1,0 +1,70 @@
+@import './styles/variables/fontsAndColors.module.scss';
+
+.section {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.weather {
+    font-weight: $weight-bold;
+    font-size: 2rem;
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    line-height: 0.5;
+}
+
+.celsius {
+    font-size: 6rem;
+    font-weight: $weight-bold;
+    vertical-align: middle;
+}
+
+.dsp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    background-color: $colorBlue;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+    border: none;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon {
+    margin-bottom: 1rem;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: $weight-bold;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+.icon_text {
+    font-size: 1.3rem;
+    font-weight: $weight-medium;
+}
