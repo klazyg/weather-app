@@ -1,0 +1,12 @@
+@import './styles/variables/fontsAndColors.module.scss';
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.text {
+    font-weight: $weight-bold;
+}
