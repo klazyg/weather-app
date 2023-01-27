@@ -6,7 +6,7 @@ import Temperature from '../components/Temperature/Temperature';
 import axios from "axios";
 
 const BASE_URL = "http://api.openweathermap.org/data/2.5/weather/?q=";
-const API_KEY = "&units=metric&appid=ac5e8daa8e2f74ada85d8f25f774207e";
+const API_KEY = "";
 
 const Weather: React.FC = () => {
   const [weather, setWeather] = useState(null);
