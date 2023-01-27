@@ -1,8 +1,7 @@
-import React from "react";
 import styles from "./Header.module.scss";
 import Image from 'next/image';
 
-function Header() {
+const Header: React.FC = () => {
   return (
     <div className={styles.logo}>
       <Image
