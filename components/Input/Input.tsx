@@ -2,21 +2,23 @@ import { useState } from "react";
 import styles from "./Input.module.scss";
 import { BiSearchAlt } from "react-icons/bi";
 
-function Input({ setCity }) {
+type InputProps = {
+  setCity: (city: string) => void;
+}
 
+const Input: React.FC<InputProps> = ({ setCity }) => {
   const [query, setQuery] = useState("");
 
   const handleSearchClick = () => {
-    if (query !== "")
-      setCity(query);
+    if (query !== "") setCity(query);
   };
 
-  const handleChange = (e) => {
-    setQuery(e.target.value);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(event.target.value);
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
       handleSearchClick();
     }
   };
@@ -42,6 +44,6 @@ function Input({ setCity }) {
       </div>
     </div>
   );
-}
+};
 
 export default Input;
