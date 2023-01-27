@@ -1,12 +1,13 @@
 @import './styles/variables/fontsAndColors.module.scss';
 
 .logo {
+    gap: 1.5rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 1.5rem;
+    cursor: pointer;
 }
 
 .text {
-    font-weight: $weight-bold;
+    font-weight: $fontWeightBold;
 }

@@ -8,9 +8,9 @@
     flex-direction: column;
 }
 
-.weather {
-    font-weight: $weight-bold;
+.weatherMain {
     font-size: 2rem;
+    font-weight: $fontWeightBold;
 }
 
 .temperature {
@@ -23,7 +23,7 @@
 
 .celsius {
     font-size: 6rem;
-    font-weight: $weight-bold;
+    font-weight: $fontWeightBold;
     vertical-align: middle;
 }
 
@@ -59,12 +59,12 @@
 }
 
 .title {
-    font-weight: $weight-bold;
+    font-weight: $fontWeightBold;
     font-size: 1.3rem;
     padding-bottom: 1rem;
 }
 
 .icon_text {
     font-size: 1.3rem;
-    font-weight: $weight-medium;
+    font-weight: $fontWeightMedium;
 }

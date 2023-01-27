@@ -1,13 +1,21 @@
-// Font-Weights
-$weight-light: 300;
-$weight-medium: 500;
-$weight-semibold: 600;
-$weight-bold: 700;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-// Background Colors
+// FONT DEFAULT SIZE
+$fontSizeDefault: 16px;
+
+//FONT FAMILIES
+$fontDefault: 'Open Sans', sans-serif;
+
+// FONT-WEIGHTS
+$fontWeightLight: 300;
+$fontWeightMedium: 500;
+$fontWeightSemiBold: 600;
+$fontWeightBold: 700;
+
+//BACKGROUNDS COLORS
 $colorBg: #85B3FE;
 $colorBlue: #609CFB;
 
-// Font Colors
+//FONTS COLORS
 $colorPrimary: white;
 $colorSecondary: black;

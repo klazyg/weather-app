@@ -9,12 +9,12 @@
 }
 
 .location {
-    font-weight: $weight-bold;
+    padding: 1rem 1.5rem;
     font-size: 2.5rem;
+    font-weight: $fontWeightBold;
     background-color: $colorBlue;
     background-repeat: no-repeat;
     border-radius: 30px;
-    padding: 1rem 1.5rem;
     border: none;
     display: flex;
 }

@@ -1,5 +1,14 @@
+@import './styles/variables/fontsAndColors.module.scss';
+
 .footer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    padding: 1rem;
+    width: 100%;
+    color: $colorPrimary;
+    font-weight: $fontWeightSemiBold;
+    text-align: right;
+}
