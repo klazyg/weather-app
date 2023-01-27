@@ -1,11 +1,26 @@
-import React from "react";
 import styles from "./Temperature.module.scss";
 import { AiOutlineArrowUp, AiOutlineArrowDown } from "react-icons/ai";
 import { TiWeatherWindy } from "react-icons/ti";
 import { WiHumidity } from "react-icons/wi";
 import { TbTemperature } from "react-icons/tb";
+interface WeatherData {
+    weather: Array<{
+        main: string;
+        icon: string;
+    }>;
+    main: {
+        temp: number;
+        feels_like: number;
+        humidity: number;
+        temp_max: number;
+        temp_min: number;
+    };
+    wind: {
+        speed: number;
+    };
+}
 
-const iconUrlFromCode = (code: string) => {
+const iconUrl = (code: string) => {
     const iconCodes = ["01d", "01n", "02d",
         "02n", "03d", "03n", "04d", "04n", "09d", "09n", "10d",
         "10n", "11d", "11n", "13d", "13n", "50d", "50n"];
@@ -16,23 +31,27 @@ const iconUrlFromCode = (code: string) => {
     }
 };
 
-export { iconUrlFromCode };
+export { iconUrl };
 
-function Temperature({ data }) {
+const Temperature: React.FC<{ data: WeatherData }> = ({ data }) => {
+    const { weather, main, wind } = data;
+    const { main: weatherMain, icon } = weather[0];
+    const { temp, feels_like, humidity, temp_max, temp_min } = main;
+    const { speed } = wind;
     return (
         <div className={styles.section}>
-            <div className={styles.weather}>
-                {data.weather[0].main}
+            <div className={styles.weatherMain}>
+                {weatherMain}
             </div>
             <div className={styles.temperature}>
-                <img src={iconUrlFromCode(data.weather[0].icon)}
+                <img src={iconUrl(icon)}
                     className={styles.image}
-                    alt={data.weather[0].main}
+                    alt={weatherMain}
                     width={150}
                     height={150}
                 />
                 <p className={styles.celsius}>
-                    {data.main.temp.toFixed(0)}°C
+                    {temp.toFixed(1)}°C
                 </p>
             </div>
             <div className={styles.dsp}>
@@ -45,7 +64,7 @@ function Temperature({ data }) {
                             Real fell:
                         </div>
                         <span className={styles.icon_text}>
-                            {data.main.feels_like.toFixed(0)}°C
+                            {feels_like.toFixed(1)}°C
                         </span>
                     </div>
                 </div>
@@ -58,7 +77,7 @@ function Temperature({ data }) {
                             Humidity:
                         </div>
                         <span className={styles.icon_text}>
-                            {data.main.humidity.toFixed(0)}%
+                            {humidity.toFixed(1)}%
                         </span>
                     </div>
                 </div>
@@ -71,7 +90,7 @@ function Temperature({ data }) {
                             Wind:
                         </div>
                         <span className={styles.icon_text}>
-                            {data.wind.speed.toFixed(0)} km/h
+                            {speed.toFixed(1)} km/h
                         </span>
                     </div>
                 </div>
@@ -84,7 +103,7 @@ function Temperature({ data }) {
                             High:
                         </div>
                         <span className={styles.icon_text}>
-                            {data.main.temp_max.toFixed(0)}°C
+                            {temp_max.toFixed(1)}°C
                         </span>
                     </div>
                 </div>
@@ -97,7 +116,7 @@ function Temperature({ data }) {
                             Low:
                         </div>
                         <span className={styles.icon_text}>
-                            {data.main.temp_min.toFixed(0)}°C
+                            {temp_min.toFixed(1)}°C
                         </span>
                     </div>
                 </div>
