@@ -16,7 +16,7 @@ const Button: React.FC<IButton> = ({ setCity }) => {
     const handleClick = useCallback((city: City) => () => setCity(city), [setCity])
     return (
         <div className={styles.section}>
-            <p className={styles.text}>Suggestions:</p>
+            <span className={styles.text}>Suggestions:</span>
             {Object.values(City).map((city) => (
                 <button
                     className={styles.button}

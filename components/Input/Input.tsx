@@ -34,7 +34,7 @@ const Input: React.FC<InputProps> = ({ setCity }) => {
           onChange={handleChange}
           onKeyDown={handleKeyDown}
         />
-        <div className={styles.icons}>
+        <div className={styles.icon_position}>
           <BiSearchAlt
             size={50}
             className={styles.icon}
