@@ -5,9 +5,6 @@ import Currentdata from '../components/Currentdata/Currentdata';
 import Temperature from '../components/Temperature/Temperature';
 import axios from "axios";
 
-const BASE_URL = "http://api.openweathermap.org/data/2.5/weather/?q=";
-const API_KEY = "";
-
 const Weather: React.FC = () => {
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -16,7 +13,7 @@ const Weather: React.FC = () => {
 
   const getWeather = async (city: string) => {
     try {
-      const response = await axios.get((BASE_URL + city + API_KEY));
+      const response = await axios.get((process.env.BASE_URL + city + process.env.API_KEY));
       setWeather(response.data);
       setError(null);
     } catch (err) {
