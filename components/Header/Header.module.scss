@@ -1,13 +1,19 @@
-@import './styles/variables/fontsAndColors.module.scss';
+@import '/styles/main.module.scss';
 
-.logo {
-    gap: 1.5rem;
+.position {
     display: flex;
     justify-content: flex-start;
+    padding: 1rem
+}
+
+.logo {
+    display: flex;
     align-items: center;
+    gap: 1.5rem;
     cursor: pointer;
 }
 
 .text {
+    font-size: $fontSizeXL;
     font-weight: $fontWeightBold;
 }

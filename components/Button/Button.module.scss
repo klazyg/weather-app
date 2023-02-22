@@ -1,7 +1,7 @@
-@import './styles/variables/fontsAndColors.module.scss';
+@import '/styles/main.module.scss';
 
 .section {
-    padding: 2rem 0;
+    padding: 3rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@
 
 .text {
     margin-right: 0.9rem;
-    font-size: 1.3rem;
+    font-size: $fontSizeL;
     font-weight: $fontWeightBold;
     display: flex;
     flex-wrap: wrap;
@@ -19,21 +19,21 @@
 .button {
     padding: 0.5rem 1rem;
     margin: 0.6rem;
-    background-color: $colorBlue;
+    background-color: $colorBgBlueDark;
     background-repeat: no-repeat;
     border-radius: 30px;
     border: none;
     overflow: hidden;
     outline: none;
-    font-size: 1.4rem;
+    font-size: $fontSizeM;
     font-weight: $fontWeightBold;
-    color: $colorPrimary;
+    color: $colorFontPrimary;
     display: flex;
     flex-wrap: wrap;
     cursor: pointer;
-}
 
-.button:hover {
-    transition: transform 0.3s;
-    transform: scale(1.1);
+    &:hover {
+        transition: transform 0.3s;
+        transform: scale(1.1);
+    }
 }

@@ -1,4 +1,4 @@
-@import './styles/variables/fontsAndColors.module.scss';
+@import '/styles/main.module.scss';
 
 .section {
     padding: 2rem 0;
@@ -9,7 +9,8 @@
 }
 
 .weatherMain {
-    font-size: 2rem;
+    padding-top: 1rem;
+    font-size: $fontSizeL;
     font-weight: $fontWeightBold;
 }
 
@@ -17,14 +18,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2rem 0;
     gap: 4rem;
-    line-height: 0.5;
 }
 
 .celsius {
-    font-size: 6rem;
+    font-size: $fontSizeXXL;
     font-weight: $fontWeightBold;
-    vertical-align: middle;
 }
 
 .dsp {
@@ -33,14 +33,15 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 4rem;
-    background-color: $colorBlue;
+    background-color: $colorBgBlueDark;
     background-repeat: no-repeat;
     border-radius: 30px;
     padding: 1rem 1.5rem;
     border: none;
 }
 
-.icons {
+.position {
+    padding: 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,11 +61,11 @@
 
 .title {
     font-weight: $fontWeightBold;
-    font-size: 1.3rem;
-    padding-bottom: 1rem;
+    font-size: $fontSizeS;
+    padding-bottom: 1.5rem;
 }
 
-.icon_text {
-    font-size: 1.3rem;
+.value {
+    font-size: $fontSizeS;
     font-weight: $fontWeightMedium;
 }

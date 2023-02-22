@@ -1,11 +1,11 @@
-@import './styles/variables/fontsAndColors.module.scss';
+@import '/styles/main.module.scss';
 
 .section {
     padding-bottom: 2rem;
-    margin: 6px;
+    margin: 0.5rem;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    flex-direction: row;
 }
 
 .input {
@@ -16,8 +16,7 @@
     flex-direction: row;
 
     .text::placeholder {
-        color: grey;
-        font-size: 1.2rem;
+        font-size: $fontSizeXS;
         font-weight: $fontWeightLight;
         text-transform: lowercase;
     }
@@ -30,8 +29,8 @@
     border: none;
     overflow: hidden;
     outline: none;
-    color: $colorSecondary;
-    font-size: 1.2rem;
+    color: $colorFontSecondary;
+    font-size: $fontSizeXS;
     font-weight: $fontWeightSemiBold;
     text-transform: capitalize;
     display: flex;
@@ -43,13 +42,13 @@
     outline: none
 }
 
-.icons {
+.icon_position {
     margin-left: 1.5rem;
 }
 
 .icon {
     margin: 0 0.5rem;
-    color: $colorPrimary;
+    color: $colorFontPrimary;
     vertical-align: middle;
     cursor: pointer;
 }
