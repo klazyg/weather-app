@@ -1,18 +1,24 @@
-@import '../styles/variables/fontsAndColors.module.scss';
+@import '/styles/main.module.scss';
 
 html,
 body {
-  padding: 1rem 0;
+  padding: 0;
   margin: 0;
   font-family: $fontDefault;
   font-size: $fontSizeDefault;
-  background-color: $colorBg;
-  color: $colorPrimary;
+  background-color: $colorBgBlueLight !important;
+  color: $colorFontPrimary;
+  line-height: $lineHeightDefault;
+  letter-spacing: $letterSpacingDefault;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 * {
