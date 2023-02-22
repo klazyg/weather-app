@@ -10,6 +10,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <title>Weather App</title>
         <meta name="description" content="Weather App created by Klaudia Zygmunt" />
         <meta name="keywords" content="WEATHER APP PROJECT" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo_icon.png" />
       </Head>
       <Layout>
