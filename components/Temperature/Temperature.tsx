@@ -38,6 +38,40 @@ const Temperature: React.FC<{ data: WeatherData }> = ({ data }) => {
     const { main: weatherMain, icon } = weather[0];
     const { temp, feels_like, humidity, temp_max, temp_min } = main;
     const { speed } = wind;
+
+    const weatherData = [
+        {
+            icon: <TbTemperature size={50} className={styles.icon} />,
+            title: "Real feel",
+            value: feels_like.toFixed(1),
+            unit: "°C"
+        },
+        {
+            icon: <WiHumidity size={50} className={styles.icon} />,
+            title: "Humidity",
+            value: humidity.toFixed(1),
+            unit: "%"
+        },
+        {
+            icon: <TiWeatherWindy size={50} className={styles.icon} />,
+            title: "Wind",
+            value: speed.toFixed(1),
+            unit: "km/h"
+        },
+        {
+            icon: <AiOutlineArrowUp size={50} className={styles.icon} />,
+            title: "High",
+            value: temp_max.toFixed(1),
+            unit: "°C"
+        },
+        {
+            icon: <AiOutlineArrowDown size={50} className={styles.icon} />,
+            title: "Low",
+            value: temp_min.toFixed(1),
+            unit: "°C"
+        },
+    ];
+
     return (
         <div className={styles.section}>
             <div className={styles.weatherMain}>
@@ -55,71 +89,19 @@ const Temperature: React.FC<{ data: WeatherData }> = ({ data }) => {
                 </p>
             </div>
             <div className={styles.dsp}>
-                <div className={styles.icons}>
-                    <TbTemperature
-                        size={50}
-                        className={styles.icon} />
-                    <div className={styles.text}>
-                        <div className={styles.title}>
-                            Real fell:
+                {weatherData.map(({ icon, title, value, unit }, index) => (
+                    <div className={styles.position} key={index}>
+                        {icon}
+                        <div className={styles.text}>
+                            <div className={styles.title}>
+                                {title}:
+                            </div>
+                            <span className={styles.value}>
+                                {value}{unit}
+                            </span>
                         </div>
-                        <span className={styles.icon_text}>
-                            {feels_like.toFixed(1)}°C
-                        </span>
                     </div>
-                </div>
-                <div className={styles.icons}>
-                    <WiHumidity
-                        size={50}
-                        className={styles.icon} />
-                    <div className={styles.text}>
-                        <div className={styles.title}>
-                            Humidity:
-                        </div>
-                        <span className={styles.icon_text}>
-                            {humidity.toFixed(1)}%
-                        </span>
-                    </div>
-                </div>
-                <div className={styles.icons}>
-                    <TiWeatherWindy
-                        size={50}
-                        className={styles.icon} />
-                    <div className={styles.text}>
-                        <div className={styles.title}>
-                            Wind:
-                        </div>
-                        <span className={styles.icon_text}>
-                            {speed.toFixed(1)} km/h
-                        </span>
-                    </div>
-                </div>
-                <div className={styles.icons}>
-                    <AiOutlineArrowUp
-                        size={50}
-                        className={styles.icon} />
-                    <div className={styles.text}>
-                        <div className={styles.title}>
-                            High:
-                        </div>
-                        <span className={styles.icon_text}>
-                            {temp_max.toFixed(1)}°C
-                        </span>
-                    </div>
-                </div>
-                <div className={styles.icons}>
-                    <AiOutlineArrowDown
-                        size={50}
-                        className={styles.icon} />
-                    <div className={styles.text}>
-                        <div className={styles.title}>
-                            Low:
-                        </div>
-                        <span className={styles.icon_text}>
-                            {temp_min.toFixed(1)}°C
-                        </span>
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     );
