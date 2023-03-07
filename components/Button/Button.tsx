@@ -1,15 +1,9 @@
 import { useCallback } from "react";
 import styles from "./Button.module.scss";
+import { City } from "./enums";
 
 interface IButton {
     setCity: (x: City) => void;
-}
-
-enum City {
-    Warsaw = 'Warsaw',
-    Krakow = 'Krakow',
-    Wroclaw = 'Wroclaw',
-    Gdansk = 'Gdansk',
 }
 
 const Button: React.FC<IButton> = ({ setCity }) => {

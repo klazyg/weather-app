@@ -6,17 +6,30 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+    @media (max-width: 992px) {
+        padding: 0.5rem;
+    }
+
+    @media (max-width: 576px) {
+        padding: 0;
+    }
 }
 
 .text {
+    @include FontSizeL;
     margin-right: 0.9rem;
-    font-size: $fontSizeL;
     font-weight: $fontWeightBold;
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: 992px) {
+        margin-right: 0.3rem;
+    }
 }
 
 .button {
+    @include FontSizeM;
     padding: 0.5rem 1rem;
     margin: 0.6rem;
     background-color: $colorBgBlueDark;
@@ -25,7 +38,6 @@
     border: none;
     overflow: hidden;
     outline: none;
-    font-size: $fontSizeM;
     font-weight: $fontWeightBold;
     color: $colorFontPrimary;
     display: flex;
@@ -35,5 +47,10 @@
     &:hover {
         transition: transform 0.3s;
         transform: scale(1.1);
+    }
+
+    @media (max-width: 992px) {
+        margin: 0.3rem;
+        padding: 0.3rem 0.8rem;
     }
 }
