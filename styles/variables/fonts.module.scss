@@ -21,3 +21,168 @@ $fontWeightLight: 300;
 $fontWeightMedium: 500;
 $fontWeightSemiBold: 600;
 $fontWeightBold: 700;
+
+
+//FONT SIZES
+$fontSizeXXL: 6rem;
+$fontSizeXL: 2.5rem;
+$fontSizeL: 2rem;
+$fontSizeM: 1.4rem;
+$fontSizeS: 1.3rem;
+$fontSizeXS: 1.2rem;
+
+
+// RESPONSIVE FONT SIZES
+$fontSizeXXL_XL: 5rem;
+$fontSizeXL_XL: 2.2rem;
+$fontSizeL_XL: 1.7rem;
+$fontSizeM_XL: 1.2rem;
+$fontSizeS_XL: 1.1rem;
+$fontSizeXS_XL: 1rem;
+
+$fontSizeXXL_L: 4rem;
+$fontSizeXL_L: 2rem;
+$fontSizeL_L: 1.5rem;
+$fontSizeM_L: 1.1rem;
+$fontSizeS_L: 1rem;
+$fontSizeXS_L: 0.9rem;
+
+$fontSizeXXL_M: 3.5rem;
+$fontSizeXL_M: 1.8rem;
+$fontSizeL_M: 1.4rem;
+$fontSizeM_M: 1rem;
+$fontSizeS_M: 1rem;
+$fontSizeXS_M: 0.9rem;
+
+$fontSizeXXL_S: 3rem;
+$fontSizeXL_S: 1.7rem;
+$fontSizeL_S: 1.3rem;
+$fontSizeM_S: 0.9rem;
+$fontSizeS_S: 0.9rem;
+$fontSizeXS_S: 0.8rem;
+
+
+@mixin FontSizeXXL {
+    font-size: $fontSizeXXL;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeXXL_XL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeXXL_L;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeXXL_M;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeXXL_S;
+    }
+}
+
+
+@mixin FontSizeXL {
+    font-size: $fontSizeXL;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeXL_XL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeXL_L;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeXL_M;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeXL_S;
+    }
+}
+
+
+@mixin FontSizeL {
+    font-size: $fontSizeL;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeL_XL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeL_L;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeL_M;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeL_S;
+    }
+}
+
+
+@mixin FontSizeM {
+    font-size: $fontSizeM;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeM_XL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeM_L;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeM_M;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeM_S;
+    }
+}
+
+
+@mixin FontSizeS {
+    font-size: $fontSizeS;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeS_XL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeS_L;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeS_M;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeS_S;
+    }
+}
+
+
+@mixin FontSizeXS {
+    font-size: $fontSizeXS;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $fontSizeXS_XL;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: $fontSizeXS_L;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeXS_M;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: $fontSizeXS_S;
+    }
+}
