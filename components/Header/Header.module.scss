@@ -3,7 +3,11 @@
 .position {
     display: flex;
     justify-content: flex-start;
-    padding: 1rem
+    padding: 1rem;
+
+    @media (max-width: 992px) {
+        justify-content: center;
+    }
 }
 
 .logo {
@@ -11,9 +15,25 @@
     align-items: center;
     gap: 1.5rem;
     cursor: pointer;
+
+    @media (max-width: 992px) {
+        gap: 0.5rem;
+    }
+}
+
+.icon {
+    @media (max-width: 993px) {
+        display: none;
+    }
+}
+
+.icon_mobile {
+    @media (min-width: 993px) {
+        display: none;
+    }
 }
 
 .text {
-    font-size: $fontSizeXL;
+    @include FontSizeXL;
     font-weight: $fontWeightBold;
 }
