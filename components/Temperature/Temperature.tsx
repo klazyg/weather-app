@@ -41,31 +41,56 @@ const Temperature: React.FC<{ data: WeatherData }> = ({ data }) => {
 
     const weatherData = [
         {
-            icon: <TbTemperature size={50} className={styles.icon} />,
+            icon: (
+                <>
+                    <TbTemperature size={50} className={styles.icon} />
+                    <TbTemperature size={30} className={styles.icon_mobile} />
+                </>
+            ),
             title: "Real feel",
             value: feels_like.toFixed(1),
             unit: "°C"
         },
         {
-            icon: <WiHumidity size={50} className={styles.icon} />,
+            icon: (
+                <>
+                    <WiHumidity size={50} className={styles.icon} />
+                    <WiHumidity size={30} className={styles.icon_mobile} />
+                </>
+            ),
             title: "Humidity",
             value: humidity.toFixed(1),
             unit: "%"
         },
         {
-            icon: <TiWeatherWindy size={50} className={styles.icon} />,
+            icon: (
+                <>
+                    <TiWeatherWindy size={50} className={styles.icon} />
+                    <TiWeatherWindy size={30} className={styles.icon_mobile} />
+                </>
+            ),
             title: "Wind",
             value: speed.toFixed(1),
             unit: "km/h"
         },
         {
-            icon: <AiOutlineArrowUp size={50} className={styles.icon} />,
+            icon: (
+                <>
+                    <AiOutlineArrowUp size={50} className={styles.icon} />
+                    <AiOutlineArrowUp size={30} className={styles.icon_mobile} />
+                </>
+            ),
             title: "High",
             value: temp_max.toFixed(1),
             unit: "°C"
         },
         {
-            icon: <AiOutlineArrowDown size={50} className={styles.icon} />,
+            icon: (
+                <>
+                    <AiOutlineArrowDown size={50} className={styles.icon} />
+                    <AiOutlineArrowDown size={30} className={styles.icon_mobile} />
+                </>
+            ),
             title: "Low",
             value: temp_min.toFixed(1),
             unit: "°C"
@@ -78,6 +103,12 @@ const Temperature: React.FC<{ data: WeatherData }> = ({ data }) => {
                 {weatherMain}
             </div>
             <div className={styles.temperature}>
+                <img src={iconUrl(icon)}
+                    className={styles.image_mobile}
+                    alt={weatherMain}
+                    width={100}
+                    height={100}
+                />
                 <img src={iconUrl(icon)}
                     className={styles.image}
                     alt={weatherMain}

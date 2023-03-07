@@ -6,12 +6,24 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    @media (max-width: 992px) {
+        padding: 1rem 0;
+    }
 }
 
 .weatherMain {
+    @include FontSizeL;
     padding-top: 1rem;
-    font-size: $fontSizeL;
     font-weight: $fontWeightBold;
+
+    @media (max-width: 992px) {
+        padding: 0.5rem;
+    }
+
+    @media (max-width: 605px) {
+        padding: 0.3rem;
+    }
 }
 
 .temperature {
@@ -20,10 +32,32 @@
     justify-content: center;
     padding: 2rem 0;
     gap: 4rem;
+
+    @media (max-width: 992px) {
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    @media (max-width: 605px) {
+        padding: 0.5rem 0;
+        gap: 0.5rem;
+    }
+}
+
+.image {
+    @media (max-width: 993px) {
+        display: none;
+    }
+}
+
+.image_mobile {
+    @media (min-width: 993px) {
+        display: none;
+    }
 }
 
 .celsius {
-    font-size: $fontSizeXXL;
+    @include FontSizeXXL;
     font-weight: $fontWeightBold;
 }
 
@@ -38,6 +72,16 @@
     border-radius: 30px;
     padding: 1rem 1.5rem;
     border: none;
+
+    @media (max-width: 992px) {
+        gap: 2rem;
+        padding: 0.5rem 1rem;
+    }
+
+    @media (max-width: 605px) {
+        gap: 1rem;
+        padding: 0.2rem 0.7rem;
+    }
 }
 
 .position {
@@ -50,6 +94,22 @@
 
 .icon {
     margin-bottom: 1rem;
+
+    @media (max-width: 993px) {
+        display: none;
+    }
+}
+
+.icon_mobile {
+    margin-bottom: 0.5rem;
+
+    @media (min-width: 993px) {
+        display: none;
+    }
+
+    @media (max-width: 605px) {
+        margin-bottom: 0rem;
+    }
 }
 
 .text {
@@ -60,12 +120,16 @@
 }
 
 .title {
+    @include FontSizeS;
     font-weight: $fontWeightBold;
-    font-size: $fontSizeS;
     padding-bottom: 1.5rem;
+
+    @media (max-width: 992px) {
+        padding: 0.5rem;
+    }
 }
 
 .value {
-    font-size: $fontSizeS;
+    @include FontSizeS;
     font-weight: $fontWeightMedium;
 }
