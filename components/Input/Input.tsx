@@ -40,6 +40,11 @@ const Input: React.FC<InputProps> = ({ setCity }) => {
             className={styles.icon}
             onClick={handleSearchClick}
           />
+          <BiSearchAlt
+            size={35}
+            className={styles.icon_mobile}
+            onClick={handleSearchClick}
+          />
         </div>
       </div>
     </div>

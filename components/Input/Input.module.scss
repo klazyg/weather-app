@@ -6,6 +6,11 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+
+    @media (max-width: 992px) {
+        padding: 1rem;
+        margin: 0;
+    }
 }
 
 .input {
@@ -16,13 +21,14 @@
     flex-direction: row;
 
     .text::placeholder {
-        font-size: $fontSizeXS;
+        @include FontSizeXS;
         font-weight: $fontWeightLight;
         text-transform: lowercase;
     }
 }
 
 .text {
+    @include FontSizeXS;
     padding: 1rem 3rem;
     width: 35%;
     border-radius: 20px;
@@ -30,12 +36,19 @@
     overflow: hidden;
     outline: none;
     color: $colorFontSecondary;
-    font-size: $fontSizeXS;
     font-weight: $fontWeightSemiBold;
     text-transform: capitalize;
     display: flex;
     justify-content: center;
     cursor: pointer;
+
+    @media (max-width: 992px) {
+        padding: 0.8rem 1.5rem;
+    }
+
+    @media (max-width: 576px) {
+        width: 60%;
+    }
 }
 
 .text:focus {
@@ -44,6 +57,10 @@
 
 .icon_position {
     margin-left: 1.5rem;
+
+    @media (max-width: 992px) {
+        margin-left: 0.3rem;
+    }
 }
 
 .icon {
@@ -51,4 +68,19 @@
     color: $colorFontPrimary;
     vertical-align: middle;
     cursor: pointer;
+
+    @media (max-width: 993px) {
+        display: none;
+    }
+}
+
+.icon_mobile {
+    margin: 0 0.5rem;
+    color: $colorFontPrimary;
+    vertical-align: middle;
+    cursor: pointer;
+
+    @media (min-width: 992px) {
+        display: none;
+    }
 }
