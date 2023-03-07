@@ -13,7 +13,7 @@ const Weather: React.FC = () => {
 
   const getWeather = async (city: string) => {
     try {
-      const response = await axios.get((process.env.BASE_URL + city + process.env.API_KEY));
+      const response = await axios.get(`${process.env.BASE_URL}?city=${city}&appid=${process.env.API_KEY}`);
       setWeather(response.data);
       setError(null);
     } catch (err) {
