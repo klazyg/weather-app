@@ -5,19 +5,25 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Weather App is a web application that uses a weather API to display weather data for any entered location. Users can see the current temperature, real feel, humidity, wind speed, as well as the highest and lowest temperatures. The app provides a simple and convenient way for users to check the weather conditions in any location.
 
 
-## :gear: Getting Started
+## :gear: Running
 
-First, run the development server:
+After cloning the project repository, run the following command in the terminal to install all dependencies:
+
+```bash
+npm install
+```
+
+To run the development server, execute the following command:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Once the server is running, the project will be available at http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can also start editing the page by modifying the pages/index.tsx file. The page will automatically update as you edit the file.
 
-Alternatively, you can use GitHub CLI, which allows you to clone, fork, and manage the repository directly from the command line. To clone the repository using GitHub CLI, type the following command in your terminal:
+Alternatively, you can use the GitHub CLI interface to clone the repository with the following command:
 
 ```bash
 gh repo clone klazyg/weather-app
